@@ -64,9 +64,18 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
  * Write a function isVowel() that takes a character (i.e. a string of length 1)
  * and returns true if it is a vowel, false otherwise.
  */
-
+// If input is not in the specified array then return will output false
 function isVowel(char){
-    // YOUR CODE HERE
+    var vowels = [
+      "a","e","i","o","u",
+      "A","E","I","O","U"
+    ];
+
+    if(vowels.indexOf(char) === -1){
+      return false;
+    } else{
+      return true;
+    }
 }
 
 console.assert(isVowel(0) === false);
