@@ -38,7 +38,17 @@ console.assert(isNaN(max("aaa","bbb")));
  */
 
 function maxOfThree(a, b, c){
-    // YOUR CODE HERE
+  if (a > b && a > c) {
+    return a;
+  } if (b > c && b > a) {
+    return b;
+  } if (c > a && c > b) {
+    return c;
+  } if (isNaN(a) && b < c){
+    return c;
+  } if (isNaN(a) && isNaN(b) && isNaN(c)){
+    return NaN;
+  }
 }
 
 console.assert(maxOfThree(1,3,2) === 3);
