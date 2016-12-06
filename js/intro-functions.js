@@ -66,12 +66,12 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
  */
 // If input is not in the specified array then return will output false
 function isVowel(char){
-    var vowels = [
+    var vowelsArray = [
       "a","e","i","o","u",
       "A","E","I","O","U"
     ];
 
-    if(vowels.indexOf(char) === -1){
+    if(vowelsArray.indexOf(char) === -1){
       return false;
     } else{
       return true;
@@ -97,7 +97,19 @@ console.assert(isVowel("E") === true);
  */
 
 function rovarspraket(text){
-    // YOUR CODE HERE
+  var textAsString = text.toString();
+  var textArray = textAsString.split("");
+  for(var i = 0; i <textArray.length; i++){
+    var currentLetter = textArray[i];
+
+    if(!isVowel(currentLetter)){
+
+      var doubledText = currentLetter + "o" + currentLetter;
+
+      textArray.splice(i, 1, doubledText);
+     }
+  }
+  return textArray.join("");
 }
 
 console.assert(rovarspraket("a") === "a")
