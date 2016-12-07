@@ -162,7 +162,7 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
         // currentWord of for loop
         // im stuck here. I think im on the right track but i dont know
         var currentWord = sentenceSplit[i].length
-        if (currentWord > longest) {
+        if (currentWord > longest {
 
         }
   }
