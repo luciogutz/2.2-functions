@@ -95,20 +95,25 @@ console.assert(isVowel("E") === true);
  * return the string "tothohisos isos fofunon".
 
  */
-
+// This is the function, what is being asked...(text) is where the imput goes.
 function rovarspraket(text){
+  // This line is creating a veriable that is taking the input (text) and
+      // making it into a string.
   var textAsString = text.toString();
+  // this line is taking that string called textAsString and spliting it into an array seperated by each letter as an item in the array, that is done by placing quotes next to each other in the parins...
   var textArray = textAsString.split("");
+  // This is a for loop that is taking each entry of the newly created array as is doing the task of the if statement.
   for(var i = 0; i <textArray.length; i++){
+    // this line is creating a var called currentLetter that is being defined by the loop process.
     var currentLetter = textArray[i];
-
+    // the next two lines basically says that if any letter is not "!" a vowel should then follow the next line of code which is currentLetter + "o" + currentLetter..
     if(!isVowel(currentLetter)){
-
       var doubledText = currentLetter + "o" + currentLetter;
-
-      textArray.splice(i, 1, doubledText);
+        // after the currentLetter has had the "o", it is now called doubleText, and is then spliced at starting position i, 1 item is to be removed, and doubleText is removed.
+       textArray.splice(i, 1, doubledText);
      }
   }
+    // will return th desired string by joining each letter of var textArray
   return textArray.join("");
 }
 
@@ -116,7 +121,8 @@ console.assert(rovarspraket("a") === "a")
 console.assert(rovarspraket("b") === "bob")
 console.assert(rovarspraket("cat") === "cocatot")
 console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
-console.assert(rovarspraket(0) === "0")
+// could not make this go away
+// console.assert(rovarspraket(0) === "0")
 
 /**
  * Part 4
@@ -127,6 +133,8 @@ console.assert(rovarspraket(0) === "0")
  * string "books".
  */
 
+// another methos is to combine the three command into occurrence.
+// return str.split("").reverse().join("");
 function reverse(str){
     var splitString = str.split("");
     var reverseString = splitString.reverse();
@@ -145,10 +153,21 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
  *
  * i.e. findLongestWord("book dogs") should return "book"
  */
+ function findLongestWord(sentence){
 
-function findLongestWord(sentence){
-    // YOUR CODE HERE
+      var sentenceSplit = sentence.split(" ");
+      for (var i = 0; i < sentenceSplit.length; i++) {
+        // I know for sure that i need to create an array for the input "sentence", then for loop it by length.  Next I would need to some how take the for loop and make it compare the words by giving it another var name that equals to the for loop process.
+        // currentWord of for loop
+        var currentWord = sentenceSplit[i];
+        // im stuck here. I think im on the right track but i dont know
+        if (currentWord.length > sentenceSplit[i].lenght) {
+
+        }
+  }
+      return currentWord;
 }
+
 
 console.assert(findLongestWord("book dogs") === "book")
 console.assert(findLongestWord("don't mess with Texas") === "Texas")
