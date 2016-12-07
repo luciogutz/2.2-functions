@@ -128,7 +128,10 @@ console.assert(rovarspraket(0) === "0")
  */
 
 function reverse(str){
-    // YOUR CODE HERE
+    var splitString = str.split("");
+    var reverseString = splitString.reverse();
+    var joinArray = reverseString.join("");
+    return joinArray;
 }
 
 console.assert(reverse("books") === "skoob")
