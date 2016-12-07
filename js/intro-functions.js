@@ -155,13 +155,14 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
  */
  function findLongestWord(sentence){
 
+      var longest = 0;
       var sentenceSplit = sentence.split(" ");
       for (var i = 0; i < sentenceSplit.length; i++) {
         // I know for sure that i need to create an array for the input "sentence", then for loop it by length.  Next I would need to some how take the for loop and make it compare the words by giving it another var name that equals to the for loop process.
         // currentWord of for loop
-        var currentWord = sentenceSplit[i];
         // im stuck here. I think im on the right track but i dont know
-        if (currentWord.length > sentenceSplit[i].lenght) {
+        var currentWord = sentenceSplit[i].length
+        if (currentWord > longest) {
 
         }
   }
